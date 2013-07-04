@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 var indexFile = "index.html";
-var buf = new Buffer(fs.readFileSync(indexFile,"utf8"));
+var buf = new Buffer(fs.readFileSync(indexFile),"utf8");
 
   response.send(buf);
 });
